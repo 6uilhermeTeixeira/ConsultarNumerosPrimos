@@ -12,12 +12,6 @@ O primeiro divide o número por primos, enquanto o segundo marca múltiplos de p
 
 ## Como Usar
 
-1. Clone este repositório:
+1. Acesse https://6uilhermeteixeira.github.io/ConsultarNumerosPrimos/
 
-```bash
-git clone https://github.com/6uilhermeTeixeira/ConsultarNumerosPrimos.git
-```
-
-2. Abra o arquivo "index.html" no navegador Web.
-
-3. Interagir com a pagina WEB.
+2. Interagir com a pagina WEB.
