@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, button {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  #factorResult {
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 10px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+  }
+
+  #sieveResult {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-height: 10em; /* Limita a altura a 10 linhas (aproximado) */
+    overflow-y: auto; /* Adiciona scroll vertical */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 10px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+  }
+  
+  @media (min-width: 768px) {
+    /* Estilos para telas maiores */
+    body {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }

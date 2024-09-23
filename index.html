@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crivo de Eratóstenes</title>
+    <link rel="stylesheet" href="style.css"> </head>
+    <script src="scripts/factorPrimes.js"></script>
+    <script src="scripts/eratostenesSieve.js"></script>
+</head>
+<body>
+    <h1>Consultar Números Primos</h1>   
+
+    <h2>Fatorar número</h2>
+
+    <label for="number">Digite um número:</label>
+    <input type="number" id="number" name="number">
+    <button onclick="verificarPrimo()">Verificar</button>
+    <h3>Resultado</h3>
+    <p id="factorResult"></p>
+    <h3>Objetivo:</h3>
+    <p>Determinar se um dado número natural é primo ou composto.</p>
+    <h3>Descrição:</h3>
+    <p>Este algoritmo fornece uma base sólida para verificar a primalidade de números naturais. No entanto, para aplicações que exigem alta performance com números muito grandes, é recomendado explorar algoritmos mais avançados.</p>
+
+    <h2>Crivo de Eratóstenes</h2>
+
+    <label for="limit">Digite o limite:</label>
+    <input type="number" id="limit" name="limit">
+    <button onclick="sieve()">Calcular</button>
+    <h3> Resultado</h3>
+    <div id="sieveResult"></div>
+    <p id="primeCount"></p>
+    <h3>Objetivo:</h3>
+    <p>Encontrar todos os números primos até um determinado limite superior definido pelo usuário.</p>
+    <h3>Descrição:</h3>
+    <p>Este algoritmo fornece uma forma eficiente de gerar uma lista de números primos até um determinado limite, sendo uma ferramenta fundamental em diversas áreas da matemática e da ciência da computação.</p>
+
+</body>
+</html>
