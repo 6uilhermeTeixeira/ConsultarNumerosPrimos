@@ -38,8 +38,9 @@ body {
 
   div {
     border: 1px solid #ddd;
-    margin-top: 25px;
-    margin-bottom: 5px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 5%;
   }
 
   ul {
