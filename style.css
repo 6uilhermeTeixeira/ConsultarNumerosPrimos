@@ -5,6 +5,53 @@ body {
     padding: 20px;
   }
   
+  /* Estilos do menu */
+  nav {
+    background-color: #f2f2f2;
+    overflow: hidden;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza os itens do menu */
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd; /* Adiciona borda aos botões */
+  }
+  
+  nav a:hover {
+    background-color: #ddd;
+  }
+
+  div {
+    border: 1px solid #ddd;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+
+  ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão da lista */
+    margin-top: 25px;
+  }
+  
+  li {
+    margin-left: 20px; /* Adiciona um espaçamento à esquerda de cada item */
+  }
+  
   h1 {
     margin-bottom: 20px;
   }
@@ -19,11 +66,14 @@ body {
     margin-bottom: 15px;
   }
   
+
   #factorResult {
+    width: 80%; /* Ajuste a largura conforme necessário */
     border: 1px solid #ccc; /* Borda cinza */
     border-radius: 10px; /* Cantos arredondados */
     padding: 10px;
     margin: 0 auto; /* Centraliza horizontalmente */
+    margin-bottom: 25px;
   }
 
   #sieveResult {
@@ -34,12 +84,34 @@ body {
     border-radius: 10px; /* Cantos arredondados */
     padding: 10px;
     margin: 0 auto; /* Centraliza horizontalmente */
+    margin-bottom: 25px;
   }
   
+  #primeCount {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 10px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-bottom: 25px;
+  }
+
+
   @media (min-width: 768px) {
     /* Estilos para telas maiores */
     body {
       max-width: 800px;
       margin: 0 auto;
+    }
+  }
+
+  /* Responsividade */
+  @media screen and (max-width: 600px) {
+    nav ul {
+      flex-direction: column; /* Muda para vertical em telas pequenas */
+      text-align: left;
+    }
+    nav li {
+      width: 100%;
     }
   }

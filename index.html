@@ -7,32 +7,88 @@
     <script src="scripts/eratostenesSieve.js"></script>
 </head>
 <body>
-    <h1>Consultar Números Primos</h1>   
+    <h1>Números Primos</h1>   
 
-    <h2>Fatorar número</h2>
+    <nav>
+        <ul>
+            <li><a href="#factor">Teste de Fatoração</a></li>
+            <li><a href="#sieve">Crivo de Eratóstenes</a></li>
+            <li><a href="#description">Números Primos e a Criptografia</a></li>
+        </ul>
+    </nav>
 
-    <label for="number">Digite um número:</label>
-    <input type="number" id="number" name="number">
-    <button onclick="verificarPrimo()">Verificar</button>
-    <h3>Resultado</h3>
-    <p id="factorResult"></p>
-    <h3>Objetivo:</h3>
-    <p>Determinar se um dado número natural é primo ou composto.</p>
-    <h3>Descrição:</h3>
-    <p>Este algoritmo fornece uma base sólida para verificar a primalidade de números naturais. No entanto, para aplicações que exigem alta performance com números muito grandes, é recomendado explorar algoritmos mais avançados.</p>
+    <div id="factor">
+        <h2>Teste de Fatoração</h2>
 
-    <h2>Crivo de Eratóstenes</h2>
+        <h3>Objetivo:</h3>
+        <p>Determinar se um dado número natural é primo ou composto.</p>
+        <h3>Descrição:</h3>
+        <p>Este algoritmo fornece uma base sólida para verificar a primalidade de números naturais. No entanto, para aplicações que exigem alta performance com números muito grandes, é recomendado explorar algoritmos mais avançados.</p>
+        <label for="number">Digite o número que deseja fatorar:</label>
+        <input type="number" id="number" name="number">
+        <button onclick="factorPrime()">Verificar</button>
+        <h3>Resultado</h3>
+        <p id="factorResult"></p>
+    </div>
 
-    <label for="limit">Digite o limite:</label>
-    <input type="number" id="limit" name="limit">
-    <button onclick="sieve()">Calcular</button>
-    <h3> Resultado</h3>
-    <div id="sieveResult"></div>
-    <p id="primeCount"></p>
-    <h3>Objetivo:</h3>
-    <p>Encontrar todos os números primos até um determinado limite superior definido pelo usuário.</p>
-    <h3>Descrição:</h3>
-    <p>Este algoritmo fornece uma forma eficiente de gerar uma lista de números primos até um determinado limite, sendo uma ferramenta fundamental em diversas áreas da matemática e da ciência da computação.</p>
+    <div id="sieve">
+        <h2>Crivo de Eratóstenes</h2>
+
+        <h3>Objetivo:</h3>
+        <p>Encontrar todos os números primos até um determinado limite superior definido pelo usuário.</p>
+        <h3>Descrição:</h3>
+        <p>Este algoritmo fornece uma forma eficiente de gerar uma lista de números primos até um determinado limite, sendo uma ferramenta fundamental em diversas áreas da matemática e da ciência da computação.</p>
+        <label for="limit">Digite o limite:</label>
+        <input type="number" id="limit" name="limit">
+        <button onclick="eratostenesSieve()">Calcular</button>
+        <h3> Resultado</h3>
+        <div id="sieveResult"></div>
+        <div id="primeCount"></div>
+    </div>
+
+    <div id="description">
+        <h2>Números Primos e a Criptografia</h2>
+        <p>Os números primos, aqueles divisíveis apenas por 1 e por eles mesmos, desempenham um papel fundamental na criptografia moderna. Essa relação entre a matemática pura e a segurança da informação pode parecer surpreendente, mas é justamente essa simplicidade e complexidade dos números primos que os torna a base de muitos dos sistemas de criptografia que utilizamos diariamente.</p>
+        <br>
+        <h2>Por que os números primos são tão importantes?</h2>
+        <ul>
+            <li>
+                <h3>Dificuldade de fatoração:</h3>
+                <p>Encontrar os fatores primos de um número grande é um problema computacionalmente muito difícil. Mesmo com os computadores mais poderosos, fatorar números primos com centenas de dígitos leva um tempo extremamente longo.</p>
+            </li>
+            <li>
+                <h3>Chaves públicas e privadas:</h3>
+                <p>Essa dificuldade é explorada em sistemas criptográficos de chave pública, como o RSA. Nesses sistemas, a chave pública, que pode ser compartilhada livremente, é baseada no produto de dois números primos muito grandes. A chave privada, que deve ser mantida em segredo, é derivada desses mesmos números primos. A dificuldade de fatorar esse produto garante a segurança do sistema, pois um invasor teria que encontrar os fatores primos para decifrar a mensagem.</p>
+            </li>
+            <li>
+                <h3>Algoritmos de criptografia:</h3>
+                <p>Além do RSA, outros algoritmos de criptografia, como o Diffie-Hellman, também se baseiam nas propriedades dos números primos. Esses algoritmos são usados para estabelecer conexões seguras entre dispositivos, como quando você se conecta a um site bancário.</p>
+            </li>
+        </ul>
+        <br>
+        <h2>Exemplos de aplicações da criptografia com números primos:</h2>
+        <ul>
+            <li>
+                <h3>Comércio eletrônico:</h3>
+                <p>Ao realizar uma compra online, seus dados pessoais e financeiros são criptografados usando algoritmos baseados em números primos para garantir que apenas você e o vendedor possam acessá-los.</p>
+            </li>
+            <li>
+                <h3>Bancos e instituições financeiras:</h3>
+                <p>As transações bancárias online dependem de criptografia para proteger as informações dos clientes.</p>
+            </li>
+            <li>
+                <h3>E-mail:</h3>
+                <p>A criptografia com números primos é usada para proteger o conteúdo dos e-mails, impedindo que sejam interceptados e lidos por terceiros.</p>
+            </li>
+            <li>
+                <h3>Redes privadas virtuais (VPNs):</h3>
+                <p>As VPNs utilizam criptografia para criar túneis seguros na internet, protegendo sua conexão e seus dados.</p>
+            </li>
+        </ul>
+        <br>
+        <h2>Em resumo</h2>
+        <p>Os números primos, com sua aparente simplicidade, escondem uma complexidade que os torna uma ferramenta essencial para a segurança da informação. A dificuldade de fatorar números primos grandes é a base de muitos dos sistemas de criptografia que utilizamos diariamente para proteger nossos dados e garantir a privacidade online.</p>
+    </div>
 
 </body>
 </html>

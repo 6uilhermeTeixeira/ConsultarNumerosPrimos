@@ -1,4 +1,4 @@
-function verificarPrimo() {
+function factorPrime() {
     const number = parseInt(document.getElementById('number').value);
     let isPrime = true;
 
